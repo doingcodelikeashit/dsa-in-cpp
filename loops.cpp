@@ -75,4 +75,12 @@ int main(){
     else{
         cout<<"\n N is NOT Prime :(\n";
     }
+
+    //nested loops - loop under loop called nested loops
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<" * ";
+        }
+        cout<<endl;
+    }
 }
