@@ -125,4 +125,72 @@ int main(){
           cout<<endl;
     }
     
+    //hollow diamond pattern
+    cout<<"\nhollow diamond pattern :: \n";
+    for (int i = 0; i < n; i++)
+    {
+          //spaces
+          for(int j = 0;j < n-i-1;j++){
+               cout<<" ";
+          }
+          cout<<"*";
+          if(i!=0){
+               //spaces
+               for(int j = 0;j < 2*i-1;j++){
+               cout<<" ";
+               }
+               cout<<"*";
+          }
+          cout<<endl;
+    }
+    for (int i = 0; i < (n-1); i++)
+    {
+          //spaces
+          for(int j = 0;j < i+1;j++){
+               cout<<" ";
+          }
+          cout<<"*";
+          if(i != n-2){
+               //spaces
+               for(int j = 0;j < 2*(n-i)-5;j++){
+               cout<<" ";
+          }
+               cout<<"*";
+          }
+          cout<<endl;
+    }
+    //HW butterfly pattern
+    cout<<"\nHW butterfly pattern :: \n";
+    // Variables to store number of spaces and stars
+    int spaces = 2 * n - 1;
+    int stars = 0;
+
+    // The outer loop will run for (2 * N - 1) times
+    for (int i = 1; i <= 2 * n - 1; i++) {
+        // Upper half of the butterfly
+        if (i <= n) {
+            spaces = spaces - 2;
+            stars++;
+        }
+        // Lower half of the butterfly
+        else {
+            spaces = spaces + 2;
+            stars--;
+        }
+        // Print stars
+        for (int j = 1; j <= stars; j++) {
+            cout << "*";
+        }
+        // Print spaces
+        for (int j = 1; j <= spaces; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int j = 1; j <= stars; j++) {
+            if (j != n) {
+                cout << "*";
+            }
+        }
+        cout << "\n";
+    }
 }
