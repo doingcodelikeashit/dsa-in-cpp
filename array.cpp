@@ -1,5 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
+int* getArr(int n){
+    static int a[500];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter "<<i<<"'th element::";
+        cin>>a[i];
+    }
+    return a;
+    
+}
+void printArr(int a[],int n){
+    for (int i = 0; i < n; i++)
+    {
+        cout<<a[i]<<endl;
+    }
+    
+}
 int minAndMax(int a[],int n){
     int min=INT_MAX,max=INT_MIN,smallIndex=0,largeIndex=0;
     for (int i = 0; i < n; i++)
@@ -16,7 +33,23 @@ int minAndMax(int a[],int n){
     cout<<min<<" "<<max<<endl;
     cout<<smallIndex<<" "<<largeIndex<<endl;
 }
+//linear search
+void linearSearch(int a[],int n,int num){
+    for (int i = 0; i < n; i++)
+    {
+        if(a[i]==num){
+            cout<<"Element found in array";
+        }
+    }
+    
+}
 int main(){
-    int marks[5]={1,2,3,4,5};
-    int minandmax=minAndMax(marks,5);
+    int n;
+    cout<<"Enter size of array::";
+    cin>>n;
+    int* ptr =getArr(n);
+    printArr(ptr,n);
+    //printArr(arr);
+    minAndMax(ptr,n);
+    linearSearch(ptr,n,8);
 }
