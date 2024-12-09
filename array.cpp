@@ -43,6 +43,17 @@ void linearSearch(int a[],int n,int num){
     }
     
 }
+void reverseArr(int a[],int n){
+    //2 pointer approach
+    int start=0,end=n-1,temp=0;
+    while(start<end){
+        swap(a[start],a[end]);
+        start++;
+        end--;
+    }
+    cout<<"Reversed array is :: "<<endl;
+    printArr(a,n);
+}
 int main(){
     int n;
     cout<<"Enter size of array::";
@@ -52,4 +63,5 @@ int main(){
     //printArr(arr);
     minAndMax(ptr,n);
     linearSearch(ptr,n,8);
+    reverseArr(ptr,n);
 }
